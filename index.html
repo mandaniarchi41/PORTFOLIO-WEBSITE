@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Welcome to My Portfolio">Welcome to My Portfolio</h1>
+            <p class="subtitle">Frontend Developer & Designer</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate frontend developer with expertise in creating beautiful and functional web experiences.</p>
+            </div>
+            <div class="about-image">
+                <div class="image-container">
+                    <div class="placeholder-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <span>HTML/CSS</span>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="90"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="85"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>React</span>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="80"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-image">
+                        <img src="https://media.licdn.com/dms/image/v2/C4D12AQFKlRdSpv8M8g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1653218685163?e=2147483647&v=beta&t=-98PvijXH4uonrZdoaXxWy9T2cfZ0vTFwTDo4lApetg" alt="Project 1 Preview" />
+                    </div>
+                </div>
+                <h3>Project 1</h3>
+                <p>Description of project 1</p>
+                <div class="project-links">
+                    <a href="#" class="btn small">View Demo</a>
+                    <a href="#" class="btn small">Source Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrLGfGZetOghfub_AwUwhLFfBXjGqLNJnKl_SKKBBrZ1bSLpy9lDsb3_xZXwzv_6-43Y&usqp=CAU" alt="Project 2 Preview" />
+                    </div>
+                <h3>Project 2</h3>
+                <p>Description of project 2</p>
+                <div class="project-links">
+                    <a href="#" class="btn small">View Demo</a>
+                    <a href="#" class="btn small">Source Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD4aeh08YGijdx59J7qQmN8Rn9tipwNNl9RrIAUaNWf0d_p_7CEjxdC-x_k-edDEma3WM&usqp=CAU" alt="Project 3 Preview" />
+                    </div>
+                <h3>Project 3</h3>
+                <p>Description of project 3</p>
+                <div class="project-links">
+                    <a href="#" class="btn small">View Demo</a>
+                    <a href="#" class="btn small">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
