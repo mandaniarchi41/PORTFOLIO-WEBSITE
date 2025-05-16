@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <nav class="navbar">
         <div class="logo">Portfolio</div>
         <ul class="nav-links">
@@ -17,8 +20,12 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
     </nav>
 
     <section id="home" class="hero">
@@ -30,13 +37,37 @@
                 <a href="#contact" class="btn secondary">Contact Me</a>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I'm a passionate frontend developer with expertise in creating beautiful and functional web experiences.</p>
+                <p>I'm a passionate frontend developer with expertise in creating beautiful and functional web experiences. With a strong foundation in modern web technologies and a keen eye for design, I strive to build engaging digital solutions.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
             </div>
             <div class="about-image">
                 <div class="image-container">
@@ -67,45 +98,112 @@
                     <div class="progress" data-progress="80"></div>
                 </div>
             </div>
+            <div class="skill">
+                <span>Node.js</span>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="75"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>UI/UX Design</span>
+                <div class="progress-bar">
+                    <div class="progress" data-progress="85"></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
         <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" data-category="web">
                 <div class="project-image">
-                    <div class="project-image">
-                        <img src="https://media.licdn.com/dms/image/v2/C4D12AQFKlRdSpv8M8g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1653218685163?e=2147483647&v=beta&t=-98PvijXH4uonrZdoaXxWy9T2cfZ0vTFwTDo4lApetg" alt="Project 1 Preview" />
+                    <img src="https://media.licdn.com/dms/image/v2/C4D12AQFKlRdSpv8M8g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1653218685163?e=2147483647&v=beta&t=-98PvijXH4uonrZdoaXxWy9T2cfZ0vTFwTDo4lApetg" alt="Project 1 Preview" />
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="btn small"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="btn small"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <h3>Project 1</h3>
-                <p>Description of project 1</p>
-                <div class="project-links">
-                    <a href="#" class="btn small">View Demo</a>
-                    <a href="#" class="btn small">Source Code</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrLGfGZetOghfub_AwUwhLFfBXjGqLNJnKl_SKKBBrZ1bSLpy9lDsb3_xZXwzv_6-43Y&usqp=CAU" alt="Project 2 Preview" />
-                    </div>
-                <h3>Project 2</h3>
-                <p>Description of project 2</p>
-                <div class="project-links">
-                    <a href="#" class="btn small">View Demo</a>
-                    <a href="#" class="btn small">Source Code</a>
+                <h3>E-Commerce Platform</h3>
+                <p>A modern e-commerce platform built with React and Node.js</p>
+                <div class="project-tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="mobile">
                 <div class="project-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD4aeh08YGijdx59J7qQmN8Rn9tipwNNl9RrIAUaNWf0d_p_7CEjxdC-x_k-edDEma3WM&usqp=CAU" alt="Project 3 Preview" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrLGfGZetOghfub_AwUwhLFfBXjGqLNJnKl_SKKBBrZ1bSLpy9lDsb3_xZXwzv_6-43Y&usqp=CAU" alt="Project 2 Preview" />
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="btn small"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="btn small"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                <h3>Project 3</h3>
-                <p>Description of project 3</p>
-                <div class="project-links">
-                    <a href="#" class="btn small">View Demo</a>
-                    <a href="#" class="btn small">Source Code</a>
+                </div>
+                <h3>Fitness Tracker App</h3>
+                <p>Mobile app for tracking workouts and nutrition</p>
+                <div class="project-tags">
+                    <span>React Native</span>
+                    <span>Firebase</span>
+                    <span>Redux</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD4aeh08YGijdx59J7qQmN8Rn9tipwNNl9RrIAUaNWf0d_p_7CEjxdC-x_k-edDEma3WM&usqp=CAU" alt="Project 3 Preview" />
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="btn small"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="btn small"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h3>Portfolio Design</h3>
+                <p>Modern portfolio design with advanced animations</p>
+                <div class="project-tags">
+                    <span>HTML/CSS</span>
+                    <span>GSAP</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Senior Frontend Developer</h3>
+                    <p class="timeline-date">2022 - Present</p>
+                    <p>Leading frontend development for enterprise applications</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Frontend Developer</h3>
+                    <p class="timeline-date">2020 - 2022</p>
+                    <p>Developed responsive web applications using React</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>UI/UX Designer</h3>
+                    <p class="timeline-date">2019 - 2020</p>
+                    <p>Created user interfaces and experiences for web applications</p>
                 </div>
             </div>
         </div>
@@ -129,16 +227,39 @@
                 </div>
                 <button type="submit" class="btn primary">Send Message</button>
             </form>
-            <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>email@example.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 234 567 890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>New York, USA</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
